@@ -17,6 +17,8 @@
 #include "WProgram.h"
 #endif
 
+#include<vector>
+
 struct pVector {
   double x;
   double y;
