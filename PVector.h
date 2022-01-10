@@ -397,7 +397,7 @@ class PVector {
        @param v2 another vector
        @return the angle between the vectors in radians
     */
-    static double angleBetween(PVector v1, PVector v2) {
+    double angleBetween(PVector v1, PVector v2) {
       double dot = v1._x * v2._x + v1._y * v2._y + v1._z * v2._z;
       double v1mag = sqrt(v1._x * v1._x + v1._y * v1._y + v1._z * v1._z);
       double v2mag = sqrt(v2._x * v2._x + v2._y * v2._y + v2._z * v2._z);
