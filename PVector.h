@@ -105,7 +105,7 @@ class PVector {
        @param target the target vector (if null, a new vector will be created)
        @return a new vector that is the sum of v1 and v2
     */
-    static PVector add(PVector v1, PVector v2, PVector target) {
+    PVector add(PVector v1, PVector v2, PVector target) {
       target.set(v1._x + v2._x, v1._y + v2._y, v1._z + v2._z);
       return target;
     }
@@ -119,7 +119,7 @@ class PVector {
       @return a new vector that is the sum of v1 and v2
     */
 
-    static PVector add(PVector v1, PVector v2) {
+    PVector add(PVector v1, PVector v2) {
       return add(v1, v2, 0);
     }
 
@@ -145,11 +145,11 @@ class PVector {
        @param v2 another vector
        @return a new vector that is v1 - v2
     */
-    static PVector sub(PVector v1, PVector v2) {
+    PVector sub(PVector v1, PVector v2) {
       return sub(v1, v2, 0);
     }
 
-    static PVector sub(PVector v1, PVector v2, PVector target) {
+    PVector sub(PVector v1, PVector v2, PVector target) {
       target.set(v1._x - v2._x, v1._y - v2._y, v1._z - v2._z);
       return target;
     }
@@ -171,7 +171,7 @@ class PVector {
        @param target PVector to store the result
        @return the target vector, now set to v1 * n
     */
-    static PVector mult(PVector v, double n, PVector target) {
+    PVector mult(PVector v, double n, PVector target) {
       target.set(v._x * n, v._y * n, v._z * n);
       return target;
     }
@@ -182,7 +182,7 @@ class PVector {
        @param n scalar
        @return a new vector that is v1 * n
     */
-    static PVector mult(PVector v, double n) {
+    PVector mult(PVector v, double n) {
       return mult(v, n, 0);
     }
 
@@ -200,7 +200,7 @@ class PVector {
        Multiply each element of one vector by the individual elements of another
        vector, and return the result as a new PVector.
     */
-    static PVector mult(PVector v1, PVector v2) {
+    PVector mult(PVector v1, PVector v2) {
       return mult(v1, v2, 0);
     }
 
@@ -211,7 +211,7 @@ class PVector {
        @param v2 the second vector
        @param target PVector to store the result
     */
-    static PVector mult(PVector v1, PVector v2, PVector target) {
+    PVector mult(PVector v1, PVector v2, PVector target) {
       target.set(v1._x * v2._x, v1._y * v2._y, v1._z * v2._z);
       return target;
     }
@@ -232,12 +232,12 @@ class PVector {
        @param n scalar
        @return a new vector that is v1 / n
     */
-    static PVector div(PVector v, double n) {
+    PVector div(PVector v, double n) {
       return div(v, n, 0);
     }
 
 
-    static PVector div(PVector v, double n, PVector target) {
+    PVector div(PVector v, double n, PVector target) {
       target.set(v._x / n, v._y / n, v._z / n);
       return target;
     }
@@ -256,7 +256,7 @@ class PVector {
        Multiply each element of one vector by the individual elements of another
        vector, and return the result as a new PVector.
     */
-    static PVector div(PVector v1, PVector v2) {
+    PVector div(PVector v1, PVector v2) {
       return div(v1, v2, 0);
     }
 
@@ -268,7 +268,7 @@ class PVector {
        @param v2 the second vector
        @param target PVector to store the result
     */
-    static PVector div(PVector v1, PVector v2, PVector target) {
+    PVector div(PVector v1, PVector v2, PVector target) {
       target.set(v1._x / v2._x, v1._y / v2._y, v1._z / v2._z);
       return target;
     }
@@ -292,7 +292,7 @@ class PVector {
        @param v2 another vector
        @return the Euclidean distance between v1 and v2
     */
-    static double dist(PVector v1, PVector v2) {
+    double dist(PVector v1, PVector v2) {
       double dx = v1._x - v2._x;
       double dy = v1._y - v2._y;
       double dz = v1._z - v2._z;
@@ -312,7 +312,7 @@ class PVector {
     }
 
 
-    static double dot(PVector v1, PVector v2) {
+    double dot(PVector v1, PVector v2) {
       return v1._x * v2._x + v1._y * v2._y + v1._z * v2._z;
     }
 
@@ -336,7 +336,7 @@ class PVector {
       return target;
     }
 
-    static PVector cross(PVector v1, PVector v2, PVector target) {
+    PVector cross(PVector v1, PVector v2, PVector target) {
       double crossX = v1._y * v2._z - v2._y * v1._z;
       double crossY = v1._z * v2._x - v2._z * v1._x;
       double crossZ = v1._x * v2._y - v2._x * v1._y;
