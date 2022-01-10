@@ -3,7 +3,7 @@
  * @ Create Time: 2022-01-06 10:50:38
  * @ Modified by: Richard Barnes
  * @ Modified time: 2022-01-06 11:41:44
- * @ Description:Adam Schiff Coding Train PVector Conversion for Navigation using Vector Math ie. Length and Direction of Vector 
+ * @ Description:Daniel Schiffman Coding Train PVector Conversion for Navigation using Vector Math ie. Length and Direction of Vector 
  */
 
 
